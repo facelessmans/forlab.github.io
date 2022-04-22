@@ -1,37 +1,36 @@
-## Welcome to GitHub Pages
+## Welcome to my new website
 
-You can use the [editor on GitHub](https://github.com/facelessmans/forlab.github.io/edit/gh-pages/index.md) to maintain and preview the content for your website in Markdown files.
+这个网站采用的主题是Hacker theme
 
-Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
+这个是我已经fork过的正在学习的仓库[repository](https://github.com/facelessmans/missing-semester)
 
-### Markdown
+### Show the code in homework
 
-Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
+下面我用markdown展示一下这次课程作业的部分代码
 
 ```markdown
-Syntax highlighted code block
+paper.pdf: paper.tex plot-data.png
+	pdflatex paper.tex
 
-# Header 1
-## Header 2
-### Header 3
+plot-%.png: %.dat plot.py
+	./plot.py -i $*.dat -o $@
 
-- Bulleted
-- List
-
-1. Numbered
-2. List
-
-**Bold** and _Italic_ and `Code` text
-
-[Link](url) and ![Image](src)
+。PHONY: clean
+clean:
+	rm *.pdf *.aux *.log *.png
+	#git ls-files -o | xargs rm -f
 ```
 
-For more details see [Basic writing and formatting syntax](https://docs.github.com/en/github/writing-on-github/getting-started-with-writing-and-formatting-on-github/basic-writing-and-formatting-syntax).
+由于篇幅有限，对于作业代码的展示就到这里
 
 ### Jekyll Themes
+
+下面的英文是关于网站主题的一些介绍
 
 Your Pages site will use the layout and styles from the Jekyll theme you have selected in your [repository settings](https://github.com/facelessmans/forlab.github.io/settings/pages). The name of this theme is saved in the Jekyll `_config.yml` configuration file.
 
 ### Support or Contact
+
+这里提供了当遇到问题时，需要的帮助信息
 
 Having trouble with Pages? Check out our [documentation](https://docs.github.com/categories/github-pages-basics/) or [contact support](https://support.github.com/contact) and we’ll help you sort it out.
